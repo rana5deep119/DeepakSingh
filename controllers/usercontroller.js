@@ -23,6 +23,7 @@ const registerUser= async(req,res)=>{
     await user.save();
     sendWelcomeEmail();
     res.status(201).json({ message: "User Registered Successfully" });
+    
     } 
     catch (error) {
         console.log(error);
